@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
      </soap:Body>
    </soap:Envelope>`;
 
-    fetch("http://localhost:8000/wsdl", {
+    fetch("https://soap-converter.vercel.app/wsdl", {
       method: "POST",
       headers: {
         "Content-Type": "text/xml;charset=UTF-8",
