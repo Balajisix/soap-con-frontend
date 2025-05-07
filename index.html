@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Inverter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Case Inverter</h1>
+    <p>SOAP Web Service Integration</p>
+  </header>
+
+  <div class="main-content">
+    <div class="container">
+      <h2>Transform Your Text</h2>
+      <div class="input-group">
+        <input type="text" id="inputText" placeholder="Enter text here..." />
+        <button id="invertBtn">Invert Case</button>
+      </div>
+      <div class="output-container">
+        <p id="outputText">Your result will appear here</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>Case Inverter &dash; Made by Balaji V</p>
+      <p class="footer-desc">A case converter</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('invertBtn').addEventListener('click', function() {
+      const inputText = document.getElementById('inputText').value;
+      let result = '';
+      
+      for (let i = 0; i < inputText.length; i++) {
+        const char = inputText[i];
+        if (char === char.toUpperCase()) {
+          result += char.toLowerCase();
+        } else {
+          result += char.toUpperCase();
+        }
+      }
+      
+      document.getElementById('outputText').textContent = result;
+    });
+  </script>
+</body>
+</html>
